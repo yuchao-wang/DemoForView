@@ -9,6 +9,18 @@
     android:orientation="vertical"
     tools:context="wang.yuchao.demoview.MainActivity">
 
+    <wang.yuchao.demoview.CustomProgressView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+    <wang.yuchao.demoview.SyncTextPathView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+    <wang.yuchao.demoview.AsyncTextPathView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
     <SeekBar
         android:id="@+id/seekImageWidth"
         android:layout_width="match_parent"
@@ -36,10 +48,10 @@
 
         <!--外壳变化时，由于是 match_parent，图片也会发生大小变化-->
         <!--<ImageView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:scaleType="centerCrop"-->
-            <!--android:src="@mipmap/logo"/>-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:src="@mipmap/logo"/>-->
 
     </LinearLayout>
 

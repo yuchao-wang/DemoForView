@@ -19,6 +19,10 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initImageView();
+    }
+
+    private void initImageView() {
         // 初始化默认大小是 100 * 100
         final float minWidth = dpToPixel(100);
         final float minHeight = dpToPixel(100);
@@ -51,4 +55,6 @@ public class MainActivity extends Activity {
         seekBarWidth.setOnSeekBarChangeListener(listener);
         seekBarHeight.setOnSeekBarChangeListener(listener);
     }
+
+
 }
