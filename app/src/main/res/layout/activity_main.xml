@@ -9,6 +9,25 @@
     android:orientation="vertical"
     tools:context="wang.yuchao.demoview.MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拖动 Demo"/>
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拖动交换"/>
+    </LinearLayout>
+
+
     <wang.yuchao.demoview.CustomProgressView
         android:layout_width="match_parent"
         android:layout_height="100dp"/>

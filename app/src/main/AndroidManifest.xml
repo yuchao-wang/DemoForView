@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".drag.MainActivity2ForDrag"/>
+        <activity android:name=".drag.MainActivityForDragView"/>
     </application>
 
 </manifest>

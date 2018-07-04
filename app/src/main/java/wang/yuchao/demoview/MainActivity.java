@@ -4,8 +4,12 @@ import android.app.Activity;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
+
+import wang.yuchao.demoview.drag.MainActivity2ForDrag;
+import wang.yuchao.demoview.drag.MainActivityForDragView;
 
 public class MainActivity extends Activity {
 
@@ -20,6 +24,20 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         initImageView();
+
+        findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(MainActivity2ForDrag.getIntentToMe(MainActivity.this));
+            }
+        });
+
+        findViewById(R.id.btn2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(MainActivityForDragView.getIntentToMe(MainActivity.this));
+            }
+        });
     }
 
     private void initImageView() {
