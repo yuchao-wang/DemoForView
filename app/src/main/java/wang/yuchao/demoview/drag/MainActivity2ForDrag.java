@@ -103,12 +103,12 @@ public class MainActivity2ForDrag extends Activity {
                         Log.d(TAG, "开始");
                         iv2.setText("开始");
                         break;
-                    // 拖拽进某个控件后，保持
+                    // 拖拽进某个控件后：一次
                     case DragEvent.ACTION_DRAG_ENTERED:
                         Log.d(TAG, "进入保持");
                         iv2.setText("进入保持");
                         break;
-                    // 推拽进入某个控件
+                    // 推拽进入某个控件 ：多次
                     case DragEvent.ACTION_DRAG_LOCATION:
                         Log.d(TAG, "拖入了");
                         iv2.setText("拖入了");
