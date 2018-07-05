@@ -49,6 +49,7 @@ public class MainActivityForDragView extends Activity {
         }
     }
 
+    // 参考 ：https://blog.zhanghai.me/drag-and-drop-with-animation-on-linearlayout/
     private void setViewDragListener(View view) {
         view.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -127,7 +128,7 @@ public class MainActivityForDragView extends Activity {
                 }
                 ObjectAnimator
                         .ofFloat(view, View.Y, viewY, view.getTop())
-                        .setDuration(500)
+                        .setDuration(300)
                         .start();
                 return true;
             }
