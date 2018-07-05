@@ -50,6 +50,7 @@ public class DragUtils {
                         }
                         break;
                     }
+                    case DragEvent.ACTION_DROP:
                     case DragEvent.ACTION_DRAG_ENDED:
                         if (view == dragState.view) {
                             view.setVisibility(View.VISIBLE);
