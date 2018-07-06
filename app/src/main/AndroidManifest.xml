@@ -19,6 +19,7 @@
 
         <activity android:name=".drag.MainActivity2ForDrag"/>
         <activity android:name=".drag.MainActivityForDragView"/>
+        <activity android:name=".animation.MainActivityAnimation"/>
     </application>
 
 </manifest>
