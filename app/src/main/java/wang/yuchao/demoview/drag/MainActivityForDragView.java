@@ -118,6 +118,7 @@ public class MainActivityForDragView extends Activity {
         runAnimation(targetView, viewY);
     }
 
+    // 动画预览
     private void runAnimation(final View view, final float viewY) {
         final ViewTreeObserver observer = view.getViewTreeObserver();
         observer.addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {

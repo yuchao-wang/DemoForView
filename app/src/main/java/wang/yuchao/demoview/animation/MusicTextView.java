@@ -78,16 +78,17 @@ public class MusicTextView extends View {
 
             Paint.FontMetricsInt fontMetricsInt = backPaint.getFontMetricsInt();
 
-            float x = getWidth() / 2 - backPaint.measureText(TEXT) / 2;
-            float y = getHeight() / 2 - (fontMetricsInt.top + fontMetricsInt.bottom) / 2;
-            canvas.drawText(TEXT, x, y, backPaint);
+            // 注意：drawText x y 是一个 baseline 在 TextView 左下角的一个位置（但没到最左下边
+            float baseX = getWidth() / 2 - backPaint.measureText(TEXT) / 2;
+            float baseY = getHeight() / 2 - (fontMetricsInt.top + fontMetricsInt.bottom) / 2;
+            canvas.drawText(TEXT, baseX, baseY, backPaint);
             canvas.save();
 
-            Log.e(TAG, "x:" + x + " y:" + y + " w:" + getWidth() + " h:" + getHeight() + " top:" + fontMetricsInt.top + " bottom:" + fontMetricsInt.bottom + " measure:" + backPaint.measureText(TEXT));
+            Log.e(TAG, "x:" + baseX + " y:" + baseY + " w:" + getWidth() + " h:" + getHeight() + " top:" + fontMetricsInt.top + " bottom:" + fontMetricsInt.bottom + " measureWidth:" + backPaint.measureText(TEXT));
 
             Rect rect = new Rect(0, 0, (int) (bounds.width() * progress / 100), bounds.height());
             canvas.clipRect(rect);
-            canvas.drawText(TEXT, x, y, forePaint);
+            canvas.drawText(TEXT, baseX, baseY, forePaint);
             canvas.restore();
 
             handler.postDelayed(new Runnable() {
